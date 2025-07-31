@@ -10,7 +10,7 @@ export default function TranscriptionViewer({ filename }) {
 
     const fetchTranscription = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/transcription/${filename}`);
+        const response = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/transcription/${filename}`);
         setTranscription(response.data.transcription);
       } catch (error) {
         console.error('Error fetching transcription:', error);
