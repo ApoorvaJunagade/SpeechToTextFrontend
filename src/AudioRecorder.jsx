@@ -64,7 +64,7 @@ const AudioRecorder = ({ onUploadComplete }) => {
 
     try {
       setAudioUploadStatus('Uploading...');
-      const res = await axios.post('http://localhost:5000/upload', formData, {
+      const res = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/upload`, formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
       });
 
@@ -104,7 +104,7 @@ const AudioRecorder = ({ onUploadComplete }) => {
 
     try {
       setDesktopUploadStatus('Uploading desktop file...');
-      const res = await axios.post('http://localhost:5000/upload', formData, {
+      const res = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/upload`, formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
       });
 
