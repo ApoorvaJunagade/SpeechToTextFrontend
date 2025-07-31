@@ -110,7 +110,7 @@ const AudioRecorder = ({ onUploadComplete }) => {
 
       setDesktopUploadStatus('✅ Desktop upload successful!');
       setDesktopUploaded(true);
-      console.log(res.data);
+    
       
       if (res.data?.transcription) {
       onUploadComplete(res.data.filename.filename);
